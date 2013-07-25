@@ -1,0 +1,26 @@
+clink "libSDL.so"
+cinclude "SDL/SDL.h"
+    SDL_Init
+    SDL_SetVideoMode
+    SDL_Quit
+
+cinclude "unistd.h"
+    sleep
+
+SDL_INIT_TIMER      = 0x00000001
+SDL_INIT_AUDIO      = 0x00000010
+SDL_INIT_VIDEO      = 0x00000020
+SDL_INIT_CDROM      = 0x00000100
+SDL_INIT_JOYSTICK   = 0x00000200
+SDL_INIT_EVERYTHING = 0x0000FFFF
+SDL_INIT_NOPARACHUTE    = 0x00100000 # < Don't catch fatal signals
+SDL_INIT_EVENTTHREAD    = 0x01000000 # < Not supported on all OS's
+
+
+SDL_Init SDL_INIT_VIDEO
+SDL_SetVideoMode 320 320 0 0
+
+sleep 5
+
+SDL_Quit.
+
